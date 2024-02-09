@@ -19,7 +19,8 @@ app.use('/recipes', recipesRouter);
 
 mongoose.connect(process.env.MONGODB_CONNECTION_STRING);
 
-const PORT = 3001;
+// const PORT = 3001;
+const PORT = process.env.PORT
 
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
